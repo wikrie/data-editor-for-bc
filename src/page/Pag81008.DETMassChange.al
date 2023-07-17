@@ -1,9 +1,9 @@
-page 81008 "DET Table Edit"
+page 81008 "DET MassChange"
 {
     PageType = Card;
     ApplicationArea = All;
     UsageCategory = Administration;
-    Caption = 'Table Editor';
+    Caption = 'MassChange';
     AdditionalSearchTerms = 'Debug';
     Permissions =
         tabledata AllObjWithCaption = R,
