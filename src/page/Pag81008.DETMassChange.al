@@ -3,8 +3,8 @@ page 81008 "DET MassChange"
     PageType = Card;
     ApplicationArea = All;
     UsageCategory = Administration;
-    Caption = 'MassChange';
-    AdditionalSearchTerms = 'Debug';
+    CaptionML = DEU = 'Massendatenänderungseditor', ENU = 'Mass Change';
+    AdditionalSearchTermsML = DEU = 'LEC,Massen,Daten,Änderung,Editor,Tabellen,Admin', ENU = 'LEC,Debug,Admin';
     Permissions =
         tabledata AllObjWithCaption = R,
         tabledata Field = R,
@@ -40,14 +40,14 @@ page 81008 "DET MassChange"
                 field(TableCaptionField; TableCaption)
                 {
                     ApplicationArea = All;
-                    Caption = 'Caption';
+                    CaptionML = DEU = 'Überschrift', ENU = 'Caption';
                     Editable = false;
                     ToolTip = 'Specifies the caption of the table where you want to modify or delete records.';
                 }
                 field(UseTableTriggerField; UseTableTrigger)
                 {
                     ApplicationArea = All;
-                    Caption = 'Use Trigger';
+                    CaptionML = DEU = 'benutze Tabellentrigger', ENU = 'Use Trigger';
                     ToolTip = 'Specifies if you want to run the trigger of the table that you want to modify or delete.';
                     AboutTitle = 'Do you want to use table triggers?';
                     AboutText = 'Enable this field if you want to use the table triggers when modifying or deleting records.';
@@ -56,7 +56,7 @@ page 81008 "DET MassChange"
                 field(CustomTableViewField; CustomTableView)
                 {
                     ApplicationArea = All;
-                    Caption = 'View';
+                    CaptionML = DEU = 'Ansicht', ENU = 'View';
                     Editable = false;
                     MultiLine = true;
                     ToolTip = 'Specifies the selected records.';
@@ -71,7 +71,7 @@ page 81008 "DET MassChange"
                 field(CustomTableNoOfRecordsField; TableNoOfRecords)
                 {
                     ApplicationArea = All;
-                    Caption = 'Records in Filter';
+                    CaptionML = DEU = 'Anzahl gefilterte Datensätze', ENU = 'Records in Filter';
                     Editable = false;
                     ToolTip = 'Specifies the no. of records that you selected';
                     AboutTitle = 'No. of your selected records';
@@ -91,7 +91,7 @@ page 81008 "DET MassChange"
                 field(FieldNumberField; FieldNumber)
                 {
                     ApplicationArea = All;
-                    Caption = 'No.';
+                    CaptionML = DEU = 'Nr.', ENU = 'No.';
                     BlankZero = true;
                     ToolTip = 'Specifies field no. that you want to modify.';
                     AboutTitle = 'Field selector';
@@ -111,7 +111,7 @@ page 81008 "DET MassChange"
                 field(FieldValueField; FieldValue)
                 {
                     ApplicationArea = All;
-                    Caption = 'Value';
+                    CaptionML = DEU = 'Wert', ENU = 'Value';
                     ToolTip = 'Specifies the value that the field should have after modifying it.';
                     AboutTitle = 'Choose the new value';
                     AboutText = 'This is the value that the field will have for the selected records after modifying them.';
@@ -124,7 +124,7 @@ page 81008 "DET MassChange"
                 field(UseValidateTriggerField; UseValidateTrigger)
                 {
                     ApplicationArea = All;
-                    Caption = 'Validate';
+                    CaptionML = DEU = 'Validieren', ENU = 'Validate';
                     ToolTip = 'Specifies if you want to use the OnValidate trigger of the field.';
                     AboutTitle = 'Enable OnValidateTrigger';
                     AboutText = 'Enable this field if you want to use the OnValidate Trigger of the field when modifying the records.';
@@ -140,7 +140,7 @@ page 81008 "DET MassChange"
                 field(FieldCaptionField; FieldCaption)
                 {
                     ApplicationArea = All;
-                    Caption = 'Caption';
+                    CaptionML = DEU = 'Überschrift', ENU = 'Caption';
                     Editable = false;
                     ToolTip = 'Specifies caption of the selected field.';
                 }
@@ -162,7 +162,7 @@ page 81008 "DET MassChange"
             action(DeleteRecordsAction)
             {
                 ApplicationArea = All;
-                Caption = 'Delete Table Records';
+                CaptionML = DEU = 'lösche Tabelleneinträge', ENU = 'Delete Table Records';
                 Image = Delete;
                 Promoted = true;
                 PromotedOnly = true;
@@ -181,7 +181,7 @@ page 81008 "DET MassChange"
             action(ModifyRecordsAction)
             {
                 ApplicationArea = All;
-                Caption = 'Modify Table Records';
+                CaptionML = DEU = 'bearbeite Tabelleneinträge', ENU = 'Modify Table Records';
                 Image = Apply;
                 Promoted = true;
                 PromotedOnly = true;
@@ -203,7 +203,7 @@ page 81008 "DET MassChange"
             action(CreateRecordAction)
             {
                 ApplicationArea = All;
-                Caption = 'Create Record';
+                CaptionML = DEU='erstelle Datenssatz',ENU='Create Record';
                 Image = Add;
                 Promoted = true;
                 PromotedOnly = true;
@@ -219,7 +219,7 @@ page 81008 "DET MassChange"
             action(FindLongestValueAction)
             {
                 ApplicationArea = All;
-                Caption = 'Find Longest Value';
+                CaptionML = DEU='finde längsten Wert',ENU='Find Longest Value';
                 Image = Find;
                 Promoted = true;
                 PromotedOnly = true;

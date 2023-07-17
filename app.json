@@ -22,7 +22,7 @@
   ],
   "contextSensitiveHelpUrl": "https://vld-nav.com/",
   "runtime": "10.0",
-  "features": ["TranslationFile"],
+  "features": [],
   "resourceExposurePolicy":
     {
       "allowDebugging": true,

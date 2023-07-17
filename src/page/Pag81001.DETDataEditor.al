@@ -1,10 +1,11 @@
 page 81001 "DET Data Editor"
 {
 
-    Caption = 'Data Editor';
+    CaptionML = DEU = 'Tabelleneditor', ENU = 'Data Editor';
+    AdditionalSearchTermsML = DEU = 'LEC,Tabelle,Editor,Admin', ENU = 'data,editor,LEC,Admin';
     PageType = StandardDialog;
     ApplicationArea = All;
-    UsageCategory = Tasks;
+    UsageCategory = Administration;
     InsertAllowed = false;
 
     layout
@@ -17,7 +18,7 @@ page 81001 "DET Data Editor"
                 {
                     ApplicationArea = All;
                     ToolTip = 'Source Table No.';
-                    Caption = 'Source Table No.';
+                    CaptionML = DEU = 'Ursprungstabellennummer', ENU = 'Source Table No.';
                     ShowMandatory = true;
                     trigger OnValidate()
                     var
@@ -56,7 +57,7 @@ page 81001 "DET Data Editor"
                 {
                     ApplicationArea = All;
                     ToolTip = 'Source Table Name';
-                    Caption = 'Source Table Name';
+                    CaptionML = DEU = 'Ursprungstabellenname', ENU = 'Source Table Name';
                     Editable = false;
                 }
                 field(CustomTableViewField; CustomTableView)
@@ -74,14 +75,14 @@ page 81001 "DET Data Editor"
                 {
                     ApplicationArea = All;
                     ToolTip = 'Number Of Filtered Records';
-                    Caption = 'Number Of Records';
+                    CaptionML = DEU = 'Anzahl der Datensätze', ENU = 'Number Of Records';
                     Editable = false;
                 }
                 field(FieldFilter; FieldFilter)
                 {
                     ApplicationArea = All;
                     ToolTip = 'Set Initial Field Filter';
-                    Caption = 'Field Filter';
+                    CaptionML = DEU = 'Feldfilter', ENU = 'Field Filter';
                     Editable = false;
                     trigger OnDrillDown()
                     begin
@@ -92,13 +93,13 @@ page 81001 "DET Data Editor"
                 {
                     ApplicationArea = All;
                     ToolTip = 'Without Validation';
-                    Caption = 'Without Validation (Warning!)';
+                    CaptionML = DEU = 'OHNE Validierung !!!!ACHTUNG!!!!', ENU = 'Without Validation (Warning!)';
                 }
                 field(ExcludeFlowFieldsField; ExcludeFlowFields)
                 {
                     ApplicationArea = All;
                     ToolTip = 'Exclude FlowField''s from loading';
-                    Caption = 'Exclude FlowField''s';
+                    CaptionML = DEU = 'excludiere Flowfelder', ENU = 'Exclude FlowField''s';
                 }
             }
         }
@@ -111,6 +112,15 @@ page 81001 "DET Data Editor"
             exit;
         if SourceTableNo <> 0 then
             RunDataEditorList();
+    end;
+
+
+    trigger OnInit()
+    var
+        UserPermissions: Codeunit "User Permissions";
+    begin
+        if not UserPermissions.IsSuper(UserSecurityId()) then
+            Error('Only Super User can load this please contact Admins.');
     end;
 
     local procedure RunDataEditorList()
