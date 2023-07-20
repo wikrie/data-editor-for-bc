@@ -203,7 +203,7 @@ page 81008 "DET MassChange"
             action(CreateRecordAction)
             {
                 ApplicationArea = All;
-                CaptionML = DEU='erstelle Datenssatz',ENU='Create Record';
+                CaptionML = DEU = 'erstelle Datenssatz', ENU = 'Create Record';
                 Image = Add;
                 Promoted = true;
                 PromotedOnly = true;
@@ -219,7 +219,7 @@ page 81008 "DET MassChange"
             action(FindLongestValueAction)
             {
                 ApplicationArea = All;
-                CaptionML = DEU='finde längsten Wert',ENU='Find Longest Value';
+                CaptionML = DEU = 'finde längsten Wert', ENU = 'Find Longest Value';
                 Image = Find;
                 Promoted = true;
                 PromotedOnly = true;
@@ -256,7 +256,6 @@ page 81008 "DET MassChange"
         RenameRecordsQst: Label 'Do you want to rename %1 records in table %2?', Comment = '%1 = No. of Records, %2 = Table Caption';
         CustomTableView, TableCaption : Text;
         FieldCaption, FieldName, FieldTypeName, FieldValue : Text;
-
 
     trigger OnInit()
     var
